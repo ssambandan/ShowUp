@@ -4,9 +4,10 @@ var d = new Date();
 return d.getTime();
 }
 
-function Event (name, location, geolocation, code, creator, subscribers[], date) {
+function Event (lastname, firstname, location, geolocation, creator, subscribers) {
 var d = new Date();
-this.name = name;
+this.lastname = lastname;
+this.firstname = firstname;
 this.location = location;
 this.geolocation = geolocation;
 this.code = d.getTime();
@@ -15,7 +16,7 @@ this.subscribers = subscribers;
 this.date = d;
 }
 
-module.exports = event;
+module.exports = Event;
 
 
 
