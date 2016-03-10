@@ -1,6 +1,6 @@
 var event = require('./Lib.js');
 
-var Birthday = new event ("Sachidanandan", "Sambandan", "13826 Moon Lane", "23 42 34", "Sachi", ["parveen", "adnaan", "ridhaa"]);
+var Birthday = new event ("Sachidanandan", "Sambandan", "13826 Moon Lane", 23, 42, "Sachi", ["parveen", "adnaan", "ridhaa"]);
 
 console.log (Birthday);
 

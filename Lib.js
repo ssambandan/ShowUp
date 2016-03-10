@@ -1,16 +1,17 @@
 
-function code_gen () {
-var d = new Date();
-return d.getTime();
+function codegen () { 
+    var don = new Date();
+return don.getTime();
 }
 
-function Event (lastname, firstname, location, geolocation, creator, subscribers) {
+function Event (lastname, firstname, latitude, longitude, geolocation, creator, subscribers) {
 var d = new Date();
 this.lastname = lastname;
 this.firstname = firstname;
-this.location = location;
+this.latitude = latitude;
+this.longitude = longitude;
 this.geolocation = geolocation;
-this.code = d.getTime();
+this.code = codegen();
 this.creator = creator;
 this.subscribers = subscribers;
 this.date = d;
