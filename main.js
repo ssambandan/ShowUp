@@ -1,6 +1,13 @@
-var event = require('./Lib.js');
+var event = require('./Event.js');
+var user = require('./User.js');
 
-var Birthday = new event ("Sachidanandan", "Sambandan", "13826 Moon Lane", 23, 42, "Sachi", ["parveen", "adnaan", "ridhaa"]);
+function code_gen () {
+var d = new Date();
+return d.getTime();
+}
+
+
+var Birthday = new event ("Sachi's Birthday", "13826 Moon Lane", "23 42 34", "Sachi", ["parveen", "adnaan", "ridhaa"]);
 
 console.log (Birthday);
 
