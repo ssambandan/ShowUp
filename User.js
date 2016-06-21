@@ -1,11 +1,12 @@
-function User (lastname, firstname, location, geolocation ) {
+function User (lastname, firstname, geopermission, latitude, longitude) {
 var d = new Date();
 this.lastname = lastname;
 this.firstname = firstname;
-this.location = location;
-this.geolocation = geolocation;
+this.geopermission = geopermission;
+this.latitude = latitude;
+this.longitude = longitude;
 this.code = d.getTime();
 this.date = d;
 }
 
-exports.User = new User;
+module.exports = User;

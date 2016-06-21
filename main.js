@@ -1,5 +1,7 @@
 var event = require('./Event.js');
 var user = require('./User.js');
+var array_of_users = []
+var array_of_events  = []
 
 function code_gen () {
 var d = new Date();
@@ -20,3 +22,5 @@ for (i = 0; i < 1000; ++i) {};
 
 console.log ("Hello");
 console.log (Birthday);
+
+
