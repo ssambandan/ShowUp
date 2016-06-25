@@ -1,7 +1,6 @@
-function User (lastname, firstname, geopermission, latitude, longitude) {
+function User (name, geopermission, latitude, longitude) {
 var d = new Date();
-this.lastname = lastname;
-this.firstname = firstname;
+this.name = name;
 this.geopermission = geopermission;
 this.latitude = latitude;
 this.longitude = longitude;

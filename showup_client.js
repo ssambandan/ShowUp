@@ -1,15 +1,33 @@
 ht = require('http')
 fs = require('fs')
 net = require('net')
-var simul = {
-	name: 'Sachi',
-	home: 42,
-	number: 64};
 
-var simul1 = {
-	name: 'Parveen',
-	home: 25,
-	number: 37};
+function User (name, geopermission, latitude, longitude) {
+var d = new Date();
+this.name = name;
+this.geopermission = geopermission;
+this.latitude = latitude;
+this.longitude = longitude;
+this.code = d.getTime();
+this.date = d;
+this.action = 'create_user';
+}
+
+function Event (name, location, latitude, longitude, creator_code, subscribers) {
+var d = new Date();
+this.name = name;
+this.location = location;
+this.latitude = latitude;
+this.longitude = longitude;
+this.code = d.getTime();
+this.creator_code = creator_code;
+this.subscribers = subscribers;
+this.date = d;
+this.action = 'create_event';
+}
+
+var simul = new User ('sachi.sambandan@gmail.com', true, 23, 48);
+var simul1 = new Event ('My Birthday', '13826 Moon Lane', 233, 180, 1345678, ['adnaan', 'parveen', 'ridhaa']);
 
 var options = {host: 'localhost',
                family: 4,
@@ -38,8 +56,7 @@ req.on('error', (e) => {
 
 // req.write ('Hi, Sachi here');
 req.write(JSON.stringify(simul));
-
-req.write(JSON.stringify(simul1));
+req.write(JSON.stringify(simul1))
 
 req.end();
 
