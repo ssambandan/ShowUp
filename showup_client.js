@@ -26,6 +26,7 @@ this.date = d;
 this.action = 'create_event';
 }
 
+
 var simul = new User ('sachi.sambandan@gmail.com', true, 23, 48);
 var simul1 = new Event ('My Birthday', '13826 Moon Lane', 233, 180, 1345678, ['adnaan', 'parveen', 'ridhaa']);
 
@@ -58,7 +59,16 @@ req.on('error', (e) => {
 req.write(JSON.stringify(simul));
 req.write(JSON.stringify(simul1))
 
-req.end();
+var Join_Event = {
+	action: 'join_event',
+	event_code: 1466971207952,
+	creator_code: 1345678,
+	subscribers: 'sachi'
+};
+
+req.write(JSON.stringify(Join_Event));
+
+
 
 
 // console.log (simul);
